@@ -12,7 +12,7 @@ export default class extends React.Component {
       result: null,
       error: null,
       loading: true,
-      isMovie: pathname.includes("/movies/"),
+      isMovie: pathname.includes("/movie/"),
     };
   }
 
