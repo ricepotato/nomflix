@@ -12,9 +12,9 @@ const CountryList = styled.ul`
 `;
 
 const CountryItem = styled.li`
-  padding: 4px;
+  padding: 4px 10px;
   border: 2px solid #fafafa;
-  border-radius: 2px;
+  border-radius: 4px;
   margin-right: 5px;
 `;
 

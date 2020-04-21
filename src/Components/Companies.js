@@ -19,10 +19,15 @@ const CompanyItem = styled.li`
   display: flex;
   align-items: center;
   margin-right: 10px;
+  background-color: rgba(255, 255, 255, 0.8);
+  height: 60px;
+  padding: 4px 10px;
+  border-radius: 5px;
 `;
 
 const CompanyImage = styled.img`
-  width: 80px;
+  max-width: 180px;
+  max-height: 45px;
 `;
 
 const Companies = ({ companies }) => (
