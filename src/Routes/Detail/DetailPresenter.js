@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import styled from "styled-components";
 import Loader from "Components/Loader";
 import Videos from "Components/Videos";
+import Companies from "Components/Companies";
 import { Helmet } from "react-helmet";
 
 const Container = styled.div`
@@ -131,6 +132,7 @@ const DetailPresenter = ({ result, loading, error }) =>
               (item) => item.site === "YouTube"
             )}
           ></Videos>
+          <Companies companies={result.production_companies}></Companies>
         </Data>
       </Content>
     </Container>
