@@ -4,6 +4,7 @@ import styled from "styled-components";
 import Loader from "Components/Loader";
 import Videos from "Components/Videos";
 import Companies from "Components/Companies";
+import Countries from "Components/Countries";
 import { Helmet } from "react-helmet";
 
 const Container = styled.div`
@@ -132,7 +133,16 @@ const DetailPresenter = ({ result, loading, error }) =>
               (item) => item.site === "YouTube"
             )}
           ></Videos>
-          <Companies companies={result.production_companies}></Companies>
+          {result.production_companies ? (
+            <Companies companies={result.production_companies}></Companies>
+          ) : (
+            ""
+          )}
+          {result.production_countries ? (
+            <Countries countries={result.production_countries}></Countries>
+          ) : (
+            ""
+          )}
         </Data>
       </Content>
     </Container>
