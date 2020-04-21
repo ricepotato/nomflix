@@ -5,6 +5,7 @@ import Loader from "Components/Loader";
 import Videos from "Components/Videos";
 import Companies from "Components/Companies";
 import Countries from "Components/Countries";
+import Seasons from "Components/Seasons";
 import { Helmet } from "react-helmet";
 
 const Container = styled.div`
@@ -143,6 +144,7 @@ const DetailPresenter = ({ result, loading, error }) =>
           ) : (
             ""
           )}
+          {result.seasons ? <Seasons seasons={result.seasons}></Seasons> : ""}
         </Data>
       </Content>
     </Container>
