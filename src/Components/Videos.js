@@ -22,7 +22,7 @@ const ThumbnameImg = styled.img`
 
 const Videos = ({ videos }) => (
   <Container>
-    <Title>Videos</Title>
+    <Title>Youtube Links</Title>
     <VideoList>
       {videos.map((item) => (
         <VideoItem>
