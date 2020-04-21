@@ -2,6 +2,10 @@ import React from "react";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 import Loader from "Components/Loader";
+import Videos from "Components/Videos";
+import Companies from "Components/Companies";
+import Countries from "Components/Countries";
+import Seasons from "Components/Seasons";
 import { Helmet } from "react-helmet";
 
 const Container = styled.div`
@@ -109,7 +113,10 @@ const DetailPresenter = ({ result, loading, error }) =>
             </Item>
             <Divider>.</Divider>
             <Item>
-              {result.runtime ? result.runtime : result.episode_run_time[0]} min
+              {result.runtime === 0 || result.runtime
+                ? result.runtime
+                : result.episode_run_time[0]}{" "}
+              min
             </Item>
             <Divider>.</Divider>
             <Item>
@@ -122,6 +129,22 @@ const DetailPresenter = ({ result, loading, error }) =>
             </Item>
           </ItemContainer>
           <Overview>{result.overview}</Overview>
+          <Videos
+            videos={result.videos.results.filter(
+              (item) => item.site === "YouTube"
+            )}
+          ></Videos>
+          {result.production_companies ? (
+            <Companies companies={result.production_companies}></Companies>
+          ) : (
+            ""
+          )}
+          {result.production_countries ? (
+            <Countries countries={result.production_countries}></Countries>
+          ) : (
+            ""
+          )}
+          {result.seasons ? <Seasons seasons={result.seasons}></Seasons> : ""}
         </Data>
       </Content>
     </Container>
