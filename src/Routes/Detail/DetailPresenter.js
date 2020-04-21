@@ -110,7 +110,10 @@ const DetailPresenter = ({ result, loading, error }) =>
             </Item>
             <Divider>.</Divider>
             <Item>
-              {result.runtime ? result.runtime : result.episode_run_time[0]} min
+              {result.runtime === 0 || result.runtime
+                ? result.runtime
+                : result.episode_run_time[0]}{" "}
+              min
             </Item>
             <Divider>.</Divider>
             <Item>
@@ -123,7 +126,11 @@ const DetailPresenter = ({ result, loading, error }) =>
             </Item>
           </ItemContainer>
           <Overview>{result.overview}</Overview>
-          <Videos videos={result.videos.results}></Videos>
+          <Videos
+            videos={result.videos.results.filter(
+              (item) => item.site === "YouTube"
+            )}
+          ></Videos>
         </Data>
       </Content>
     </Container>
