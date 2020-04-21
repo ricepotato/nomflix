@@ -1,5 +1,4 @@
 import React from "react";
-import PropTypes from "prop-types";
 import styled from "styled-components";
 
 const Container = styled.div`
@@ -27,9 +26,14 @@ const Videos = ({ videos }) => (
     <VideoList>
       {videos.map((item) => (
         <VideoItem>
-          <ThumbnameImg
-            src={`https://img.youtube.com/vi/${item.key}/hqdefault.jpg`}
-          ></ThumbnameImg>
+          <a
+            href={`https://www.youtube.com/watch?v=${item.key}`}
+            target="_blank"
+          >
+            <ThumbnameImg
+              src={`https://img.youtube.com/vi/${item.key}/hqdefault.jpg`}
+            ></ThumbnameImg>
+          </a>
         </VideoItem>
       ))}
     </VideoList>
