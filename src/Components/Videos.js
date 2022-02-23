@@ -29,6 +29,7 @@ const Videos = ({ videos }) => (
           <a
             href={`https://www.youtube.com/watch?v=${item.key}`}
             target="_blank"
+            rel="noopener noreferrer"
           >
             <ThumbnameImg
               src={`https://img.youtube.com/vi/${item.key}/hqdefault.jpg`}

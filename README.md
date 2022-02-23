@@ -2,6 +2,10 @@
 
 Larning React an ES6 by building a Movie Discovery app.
 
+gh:
+
+https://github.com/ricepotato/nomflix
+
 gh page :
 
 https://ricepotato.github.io/nomflix/index.html

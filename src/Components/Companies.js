@@ -5,10 +5,6 @@ const Container = styled.div`
   margin-top: 10px;
 `;
 
-const Title = styled.h3`
-  font-size: 18px;
-`;
-
 const CompanyList = styled.ul`
   margin-top: 10px;
   display: flex;
